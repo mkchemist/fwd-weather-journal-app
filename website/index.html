@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Weather Journal</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="holder headline">
+        <i data-feather="cloud"></i>
+        <span>Weather Journal App</span>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <div class="holder zip">
+            <label for="zip">Enter Zip code here</label>
+            <span id="zip_error" style="color:red;font-size: 12px;"></span>
+            <input type="text" id="zip" name="zip_code" placeholder="enter zip code here" class="form-input" />
+          </div>
+          <div class="holder feel">
+            <label for="feelings">How are you feeling today?</label>
+            <span id="feelings_error" style="color:red;font-size: 12px;"></span>
+            <textarea
+              class="form-input"
+              id="feelings"
+              name="feelings"
+              placeholder="Enter your feelings here"
+              rows="9"
+              cols="50"
+            ></textarea>
+            <button id="generate" type="submit" class="btn">Generate</button>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="holder entry">
+            <div class="title">Most Recent Entry</div>
+            <hr>
+            <div id="entryHolder">
+              <div id="date"></div>
+              <div id="temp"></div>
+              <div id="content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+    <!-- feather icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
